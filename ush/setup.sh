@@ -406,13 +406,13 @@ case $MACHINE in
 
   "JET")
     WORKFLOW_MANAGER="rocoto"
-    NCORES_PER_NODE=24
+    NCORES_PER_NODE=12
     SCHED="${SCHED:-slurm}"
-    PARTITION_DEFAULT=${PARTITION_DEFAULT:-"sjet,vjet,kjet,xjet"}
+    PARTITION_DEFAULT=${PARTITION_DEFAULT:-"sjet,vjet,tjet,ujet,kjet,xjet"}
     QUEUE_DEFAULT=${QUEUE_DEFAULT:-"batch"}
     PARTITION_HPSS=${PARTITION_HPSS:-"service"}
     QUEUE_HPSS=${QUEUE_HPSS:-"batch"}
-    PARTITION_FCST=${PARTITION_FCST:-"sjet,vjet,kjet,xjet"}
+    PARTITION_FCST=${PARTITION_FCST:-"sjet,vjet,tjet,ujet,kjet,xjet"}
     QUEUE_FCST=${QUEUE_FCST:-"batch"}
     ;;
 
