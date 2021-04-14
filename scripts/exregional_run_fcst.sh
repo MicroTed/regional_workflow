@@ -123,8 +123,8 @@ case $MACHINE in
     ulimit -s unlimited
     ulimit -a
     nprocs=$(( NNODES_RUN_FCST*PPN_RUN_FCST ))
-    APRUN="mpirun -np $nprocs"
-    OMP_NUM_THREADS=4
+    APRUN="mpirun -np ${PE_MEMBER01}"
+    OMP_NUM_THREADS=1
     ;;
 
   "GAEA")

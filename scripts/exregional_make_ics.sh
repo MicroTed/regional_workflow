@@ -191,6 +191,17 @@ case "${CCPP_PHYS_SUITE}" in
     fi
     ;;
 #
+  "FV3_RRFS_v1nssl" )
+    if [ "${EXTRN_MDL_NAME_ICS}" = "RAP" ] || \
+       [ "${EXTRN_MDL_NAME_ICS}" = "HRRR" ]; then
+      varmap_file="NSSLphys_var_map.txt"
+    elif [ "${EXTRN_MDL_NAME_ICS}" = "NAM" ] || \
+         [ "${EXTRN_MDL_NAME_ICS}" = "FV3GFS" ] || \
+         [ "${EXTRN_MDL_NAME_ICS}" = "GSMGFS" ]; then
+      varmap_file="NSSLphys_var_map.txt"
+    fi
+    ;;
+#
   *)
     print_err_msg_exit "\
 A variable mapping table has not yet been defined for this physics suite:
@@ -343,6 +354,7 @@ case "${EXTRN_MDL_NAME_ICS}" in
        [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_2017_gfdlmp_regional" ] || \
        [ "${CCPP_PHYS_SUITE}" = "FV3_CPT_v0" ] || \
        [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v15p2" ] || \
+       [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1nssl" ] || \
        [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v16beta" ]; then
       thomp_mp_climo_file=""
     elif [ "${CCPP_PHYS_SUITE}" = "FV3_GSD_v0" ] || \
@@ -376,6 +388,7 @@ case "${EXTRN_MDL_NAME_ICS}" in
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_2017_gfdlmp_regional" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_CPT_v0" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v15p2" ] || \
+     [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1nssl" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v16beta" ]; then
     thomp_mp_climo_file=""
   elif [ "${CCPP_PHYS_SUITE}" = "FV3_GSD_v0" ] || \
@@ -448,6 +461,7 @@ case "${EXTRN_MDL_NAME_ICS}" in
      [ "${CCPP_PHYS_SUITE}" = "FV3_CPT_v0" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v15p2" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v16beta" ] || \
+     [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1nssl" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1alpha" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1beta" ]; then
     nsoill_out="4"
@@ -487,6 +501,7 @@ case "${EXTRN_MDL_NAME_ICS}" in
      [ "${CCPP_PHYS_SUITE}" = "FV3_CPT_v0" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v15p2" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v16beta" ] || \
+     [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1nssl" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1alpha" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1beta" ]; then
     nsoill_out="4"
@@ -523,6 +538,7 @@ case "${EXTRN_MDL_NAME_ICS}" in
   if [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_2017_gfdlmp" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_2017_gfdlmp_regional" ] || \       
      [ "${CCPP_PHYS_SUITE}" = "FV3_CPT_v0" ] || \
+     [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1nssl" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v15p2" ] || \
      [ "${CCPP_PHYS_SUITE}" = "FV3_GFS_v16beta" ]; then
     thomp_mp_climo_file=""

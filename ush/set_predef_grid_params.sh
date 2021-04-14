@@ -110,6 +110,8 @@ case ${PREDEF_GRID_NAME} in
     DT_ATMOS="${DT_ATMOS:-300}"
   elif [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1alpha" ]; then
     DT_ATMOS="${DT_ATMOS:-40}"
+  elif [ "${CCPP_PHYS_SUITE}" = "FV3_RRFS_v1nssl" ]; then
+    DT_ATMOS="${DT_ATMOS:-40}"
   else
     DT_ATMOS="${DT_ATMOS:-40}"
   fi
