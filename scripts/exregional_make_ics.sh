@@ -194,11 +194,11 @@ case "${CCPP_PHYS_SUITE}" in
   "FV3_RRFS_v1nssl" )
     if [ "${EXTRN_MDL_NAME_ICS}" = "RAP" ] || \
        [ "${EXTRN_MDL_NAME_ICS}" = "HRRR" ]; then
-      varmap_file="NSSLphys_var_map.txt"
+      varmap_file="GSDphys_var_map.txt"
     elif [ "${EXTRN_MDL_NAME_ICS}" = "NAM" ] || \
          [ "${EXTRN_MDL_NAME_ICS}" = "FV3GFS" ] || \
          [ "${EXTRN_MDL_NAME_ICS}" = "GSMGFS" ]; then
-      varmap_file="NSSLphys_var_map.txt"
+      varmap_file="GFSphys_var_map.txt"
     fi
     ;;
 #
