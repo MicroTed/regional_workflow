@@ -73,6 +73,9 @@ FV3_RRFS_v1nssl:
     lsm: 2
     lsoil_lsm: 4
     imp_physics: 17
+    nssl_cccn: 0.6e9
+    nssl_hail_on: True
+    nssl_ccn_on: True
   atmos_model_nml:
     fdiag: 1
   fv_core_nml:
